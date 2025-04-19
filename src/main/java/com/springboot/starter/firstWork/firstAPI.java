@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class firstAPI {
     @GetMapping("/hello")
-    public String hello(){
-        return "Hello world!";
+    public Responses hello(){
+        return new Responses("Hello world!");
     }
 
     @PostMapping("/hello")
-    public String helloPost(@RequestBody String name){
-        return "Hello " + name + "!";
+    public Responses helloPost(@RequestBody String name){
+        return new Responses("Hello " + name + "!");
     }
 }
